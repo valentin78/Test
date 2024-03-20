@@ -6,7 +6,7 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
+
     <!-- Google Roboto fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,13 +31,7 @@
             overflow: auto;
         }
 
-        @media only screen and (max-width: 599px) {
-            body {
-                background-color: lightblue;
-            }
-        }
-
-        .banner {
+        .logo {
             height: 79px;
             background-color: #000;
             color: #fff;
@@ -69,7 +63,7 @@
             }
         }
 
-        .opportunities-list {
+        .opportunities-table {
             min-width: 800px;
             margin: 38px auto 0;
             border-collapse: collapse;
@@ -100,7 +94,7 @@
                 }
 
                 th {
-                    padding: 18px 0;
+                    padding: 18px 20px;
                     border: 1px solid #444;
                     font-size: 14px;
                     font-weight: normal;
@@ -140,6 +134,48 @@
             }
         }
 
+        .opportunities-list {
+            margin: 38px auto 0;
+            display: none;
+            text-align: center;
+
+            .opportunity {
+                margin: 38px auto 0;
+                padding: 0 30px 35px;
+                border-bottom: 14px solid #ededed;
+
+                .item {
+                    padding: 20px 35px;
+                    font-size: 18px;
+                    line-height: 1.61;
+                    border-bottom: 1px solid #e9e9e9;
+                    display: flex;
+                    align-items: center;
+                    text-align: left;
+
+                    label {
+                        flex: 0 0 30%;
+                    }
+
+                    span {
+                        flex: 1 1 100%;
+                        min-width: 1px;
+
+                        a, a:visited {
+                            font-size: 18px;
+                            line-height: 1.61;
+                            color: #028fb2;
+                        }
+                    }
+
+                    &.header {
+                        background-color: #000;
+                        color: #fff;
+                    }
+                }
+            }
+        }
+
         .footer {
             margin: 65px 0;
             text-align: center;
@@ -152,69 +188,261 @@
             }
         }
     </style>
+    <style>
+        @media only screen and (max-width: 1024px) {
+            .opportunities-table {
+                display: none;
+            }
+
+            .opportunities-list {
+                display: block;
+            }
+        }
+    </style>
 </head>
 <body>
+<!-- Logo -->
 
-<div class="banner">
-    <a target="_blank" href="https://dev.getapollo.com"><img alt="" src="https://dev.cdn.teamvelocityportal.com/Styles/Apollo/skins/apollo/img/Apollo_Logo.svg"/></a>
+<div class="logo">
+    <a target="_blank" href="https://dev.getapollo.com" title="Paragon Honda">
+        <img alt="" src="https://dev.cdn.teamvelocityportal.com/Styles/Apollo/skins/apollo/img/Apollo_Logo.svg"/>
+    </a>
 </div>
 
+<!-- Header -->
+
 <div class="header">
-    <img style="width: 49px; height: 49px"
-         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OSIgaGVpZ2h0PSI0OSIgdmlld0JveD0iMCAwIDQ5IDQ5Ij4NCiAgPGcgaWQ9Ikdyb3VwXzIwMzQ5IiBkYXRhLW5hbWU9Ikdyb3VwIDIwMzQ5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDAxIC0xMjEpIj4NCiAgICA8ZyBpZD0iR3JvdXBfNjc3NCIgZGF0YS1uYW1lPSJHcm91cCA2Nzc0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzMCAtMjAyKSI+DQogICAgICA8ZyBpZD0iRWxsaXBzZV84NTciIGRhdGEtbmFtZT0iRWxsaXBzZSA4NTciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM3MSAzMjMpIiBmaWxsPSIjZmZmIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMiI+DQogICAgICAgIDxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyNC41IiByPSIyNC41IiBzdHJva2U9Im5vbmUiLz4NCiAgICAgICAgPGNpcmNsZSBjeD0iMjQuNSIgY3k9IjI0LjUiIHI9IjIzLjUiIGZpbGw9Im5vbmUiLz4NCiAgICAgIDwvZz4NCiAgICA8L2c+DQogICAgPGcgaWQ9Ikdyb3VwXzIwMzQzIiBkYXRhLW5hbWU9Ikdyb3VwIDIwMzQzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MTEuNzUgMTM1Ljk2MykiPg0KICAgICAgPGcgaWQ9Ikdyb3VwXzIwMzQ3IiBkYXRhLW5hbWU9Ikdyb3VwIDIwMzQ3IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyLjUgMC41KSI+DQogICAgICAgIDxwYXRoIGlkPSJQYXRoXzcxNDkyIiBkYXRhLW5hbWU9IlBhdGggNzE0OTIiIGQ9Ik02LjgsMTEuODQ4SDE5LjU4MmEuOTM2LjkzNiwwLDAsMCwuOTE5LS43NjRMMjIuMjI4LDIuNUg0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMC43MjggLTAuNjMpIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIvPg0KICAgICAgICA8Y2lyY2xlIGlkPSJFbGxpcHNlXzExMDEiIGRhdGEtbmFtZT0iRWxsaXBzZSAxMTAxIiBjeD0iMS44NyIgY3k9IjEuODciIHI9IjEuODciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDYuNTE2IDE2Ljc5OCkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiLz4NCiAgICAgICAgPGNpcmNsZSBpZD0iRWxsaXBzZV8xMTAyIiBkYXRhLW5hbWU9IkVsbGlwc2UgMTEwMiIgY3g9IjEuODciIGN5PSIxLjg3IiByPSIxLjg3IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNS44OTEgMTYuNzk4KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIvPg0KICAgICAgICA8cGF0aCBpZD0iUGF0aF83MTQ5MyIgZGF0YS1uYW1lPSJQYXRoIDcxNDkzIiBkPSJNLjUuNUgyLjU4NmEuOTM1LjkzNSwwLDAsMSwuOS42OTRsMy4xODQsMTEuOTRBMS44NywxLjg3LDAsMCwwLDguNDgsMTQuNTIySDIwLjEzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMC41IC0wLjUpIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogICAgICA8L2c+DQogICAgPC9nPg0KICA8L2c+DQo8L3N2Zz4NCg=="
-         alt=""
-         class="icon">
+    <img alt="" class="icon" style="width: 49px; height: 49px"
+         src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0OSIgaGVpZ2h0PSI0OSIgdmlld0JveD0iMCAwIDQ5IDQ5Ij4NCiAgPGcgaWQ9Ikdyb3VwXzIwMzQ5IiBkYXRhLW5hbWU9Ikdyb3VwIDIwMzQ5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDAxIC0xMjEpIj4NCiAgICA8ZyBpZD0iR3JvdXBfNjc3NCIgZGF0YS1uYW1lPSJHcm91cCA2Nzc0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgzMCAtMjAyKSI+DQogICAgICA8ZyBpZD0iRWxsaXBzZV84NTciIGRhdGEtbmFtZT0iRWxsaXBzZSA4NTciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDM3MSAzMjMpIiBmaWxsPSIjZmZmIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMiI+DQogICAgICAgIDxjaXJjbGUgY3g9IjI0LjUiIGN5PSIyNC41IiByPSIyNC41IiBzdHJva2U9Im5vbmUiLz4NCiAgICAgICAgPGNpcmNsZSBjeD0iMjQuNSIgY3k9IjI0LjUiIHI9IjIzLjUiIGZpbGw9Im5vbmUiLz4NCiAgICAgIDwvZz4NCiAgICA8L2c+DQogICAgPGcgaWQ9Ikdyb3VwXzIwMzQzIiBkYXRhLW5hbWU9Ikdyb3VwIDIwMzQzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSg0MTEuNzUgMTM1Ljk2MykiPg0KICAgICAgPGcgaWQ9Ikdyb3VwXzIwMzQ3IiBkYXRhLW5hbWU9Ikdyb3VwIDIwMzQ3IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgyLjUgMC41KSI+DQogICAgICAgIDxwYXRoIGlkPSJQYXRoXzcxNDkyIiBkYXRhLW5hbWU9IlBhdGggNzE0OTIiIGQ9Ik02LjgsMTEuODQ4SDE5LjU4MmEuOTM2LjkzNiwwLDAsMCwuOTE5LS43NjRMMjIuMjI4LDIuNUg0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMC43MjggLTAuNjMpIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIvPg0KICAgICAgICA8Y2lyY2xlIGlkPSJFbGxpcHNlXzExMDEiIGRhdGEtbmFtZT0iRWxsaXBzZSAxMTAxIiBjeD0iMS44NyIgY3k9IjEuODciIHI9IjEuODciIHRyYW5zZm9ybT0idHJhbnNsYXRlKDYuNTE2IDE2Ljc5OCkiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiLz4NCiAgICAgICAgPGNpcmNsZSBpZD0iRWxsaXBzZV8xMTAyIiBkYXRhLW5hbWU9IkVsbGlwc2UgMTEwMiIgY3g9IjEuODciIGN5PSIxLjg3IiByPSIxLjg3IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgxNS44OTEgMTYuNzk4KSIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIHN0cm9rZS13aWR0aD0iMiIvPg0KICAgICAgICA8cGF0aCBpZD0iUGF0aF83MTQ5MyIgZGF0YS1uYW1lPSJQYXRoIDcxNDkzIiBkPSJNLjUuNUgyLjU4NmEuOTM1LjkzNSwwLDAsMSwuOS42OTRsMy4xODQsMTEuOTRBMS44NywxLjg3LDAsMCwwLDguNDgsMTQuNTIySDIwLjEzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMC41IC0wLjUpIiBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIi8+DQogICAgICA8L2c+DQogICAgPC9nPg0KICA8L2c+DQo8L3N2Zz4NCg==">
     <div class="title">Deal Alerts</div>
     <div class="subtitle">
-        By: Jennifer Villa, Ariel Munoz, TeamV <br>
-        March 01, 2024
+        By: Jennifer Villa<br>
+        Mar 20, 2024
     </div>
 </div>
 
-<table class="opportunities-list">
+<!-- Desktop View -->
+
+<table class="opportunities-table">
     <thead>
     <tr>
         <th>Name</th>
         <th>Score</th>
         <th>Status</th>
+        <th>Email</th>
         <th>Phone</th>
         <th>Vehicle</th>
         <th>Sales Person</th>
+        <th>Lease Mileage Penalty</th>
+        <th>Events</th>
     </tr>
     </thead>
     <tbody>
     <tr>
-        <td><a href="#">Jean Hao Jean Hao Jean Hao Jean Hao</a></td>
-        <td class="align-right"><a href="#">100</a></td>
+        <td><a target="_blank" href="https://dev.getapollo.com/portal/43440/opportunity-dashboard/customers/cs74128795">Ion Rudi</a></td>
+        <td class="align-right"><a target="_blank" href="https://dev.getapollo.com/portal/43440/opportunity-dashboard/customers/cs74128795">100</a></td>
         <td>Active</td>
-        <td>1234567890</td>
-        <td>2023 Honda CRV</td>
-        <td>Helen Mao</td>
+        <td>rudi@mail.com</td>
+        <td>(123) 456-7890
+        </td>
+        <td>2017 Honda Civic</td>
+        <td>Sales Person</td>
+        <td class="align-right">$234,234.00
+        </td>
+        <td class="align-right">12,313</td>
     </tr>
     <tr>
-        <td><a href="#">Jean Hao</a></td>
-        <td class="align-right"><a href="#">5</a></td>
+        <td><a target="_blank" href="https://dev.getapollo.com/portal/43440/opportunity-dashboard/customers/cs74128795">Valabenini Muharata</a></td>
+        <td class="align-right"><a target="_blank" href="https://dev.getapollo.com/portal/43440/opportunity-dashboard/customers/cs74128795">12</a></td>
         <td>Conquest</td>
-        <td>1234567890</td>
-        <td>2023 Honda CRV</td>
-        <td>Helen Mao</td>
+        <td>valabeni.ebeni@mail.com</td>
+        <td>(374) 857-4832
+        </td>
+        <td>2021 Honda CRV</td>
+        <td>Sales Person</td>
+        <td class="align-right">$2,342.00
+        </td>
+        <td class="align-right">2,343,425</td>
     </tr>
     <tr>
-        <td><a href="#">Jean Hao</a></td>
-        <td class="align-right"><a href="#">12</a></td>
+        <td><a target="_blank" href="https://dev.getapollo.com/portal/43440/opportunity-dashboard/customers/cs74128795">Jeremy Welsch</a></td>
+        <td class="align-right"><a target="_blank" href="https://dev.getapollo.com/portal/43440/opportunity-dashboard/customers/cs74128795">10</a></td>
+        <td>Previous Buyer</td>
+        <td>welsch@mail.com</td>
+        <td>(122) 344-3240
+        </td>
+        <td>2024 Mitsubishi Sport</td>
+        <td>Sales Person</td>
+        <td class="align-right">$123.00
+        </td>
+        <td class="align-right">23,434,545</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="https://dev.getapollo.com/portal/43440/opportunity-dashboard/customers/cs74128795">Sandu</a></td>
+        <td class="align-right"><a target="_blank" href="https://dev.getapollo.com/portal/43440/opportunity-dashboard/customers/cs74128795">55</a></td>
         <td>Active</td>
-        <td>1234567890</td>
-        <td>2023 Honda CRV</td>
-        <td>Helen Mao</td>
+        <td>sandu@mail.com</td>
+        <td>(122) 423-4890
+        </td>
+        <td>2001 Honda CRV</td>
+        <td>Sales Person</td>
+        <td class="align-right">$111.00
+        </td>
+        <td class="align-right">1,231,113</td>
     </tr>
     </tbody>
 </table>
 
+<!-- Mobile View -->
+
+<div class="opportunities-list">
+    <div class="opportunity">
+        <div class="item header">
+            <label>Name</label>
+            <span><a target="_blank" href="https://dev.getapollo.com/portal/43440/opportunity-dashboard/customers/cs74128795">Ion Rudi</a></span>
+        </div>
+        <div class="item">
+            <label>Score</label>
+            <span><a target="_blank" href="https://dev.getapollo.com/portal/43440/opportunity-dashboard/customers/cs74128795">100</a></span>
+        </div>
+        <div class="item">
+            <label>Email</label>
+            <span>rudi@mail.com</span>
+        </div>
+        <div class="item">
+            <label>Phone</label>
+            <span>
+                    (123) 456-7890
+            </span>
+        </div>
+        <div class="item">
+            <label>Vehicle</label>
+            <span>2017 Honda Civic</span>
+        </div>
+        <div class="item">
+            <label>Sales Person</label>
+            <span>Sales Person</span>
+        </div>
+
+
+
+        <div class="item">
+            <label>Events</label>
+            <span>12,313</span>
+        </div>
+    </div>
+    <div class="opportunity">
+        <div class="item header">
+            <label>Name</label>
+            <span><a target="_blank" href="https://dev.getapollo.com/portal/43440/opportunity-dashboard/customers/cs74128795">Valabenini Muharata</a></span>
+        </div>
+        <div class="item">
+            <label>Score</label>
+            <span><a target="_blank" href="https://dev.getapollo.com/portal/43440/opportunity-dashboard/customers/cs74128795">12</a></span>
+        </div>
+        <div class="item">
+            <label>Email</label>
+            <span>valabeni.ebeni@mail.com</span>
+        </div>
+        <div class="item">
+            <label>Phone</label>
+            <span>
+                    (374) 857-4832
+            </span>
+        </div>
+        <div class="item">
+            <label>Vehicle</label>
+            <span>2021 Honda CRV</span>
+        </div>
+        <div class="item">
+            <label>Sales Person</label>
+            <span>Sales Person</span>
+        </div>
+
+
+
+        <div class="item">
+            <label>Events</label>
+            <span>2,343,425</span>
+        </div>
+    </div>
+    <div class="opportunity">
+        <div class="item header">
+            <label>Name</label>
+            <span><a target="_blank" href="https://dev.getapollo.com/portal/43440/opportunity-dashboard/customers/cs74128795">Jeremy Welsch</a></span>
+        </div>
+        <div class="item">
+            <label>Score</label>
+            <span><a target="_blank" href="https://dev.getapollo.com/portal/43440/opportunity-dashboard/customers/cs74128795">10</a></span>
+        </div>
+        <div class="item">
+            <label>Email</label>
+            <span>welsch@mail.com</span>
+        </div>
+        <div class="item">
+            <label>Phone</label>
+            <span>
+                    (122) 344-3240
+            </span>
+        </div>
+        <div class="item">
+            <label>Vehicle</label>
+            <span>2024 Mitsubishi Sport</span>
+        </div>
+        <div class="item">
+            <label>Sales Person</label>
+            <span>Sales Person</span>
+        </div>
+
+
+
+        <div class="item">
+            <label>Events</label>
+            <span>23,434,545</span>
+        </div>
+    </div>
+    <div class="opportunity">
+        <div class="item header">
+            <label>Name</label>
+            <span><a target="_blank" href="https://dev.getapollo.com/portal/43440/opportunity-dashboard/customers/cs74128795">Sandu</a></span>
+        </div>
+        <div class="item">
+            <label>Score</label>
+            <span><a target="_blank" href="https://dev.getapollo.com/portal/43440/opportunity-dashboard/customers/cs74128795">55</a></span>
+        </div>
+        <div class="item">
+            <label>Email</label>
+            <span>sandu@mail.com</span>
+        </div>
+        <div class="item">
+            <label>Phone</label>
+            <span>
+                    (122) 423-4890
+            </span>
+        </div>
+        <div class="item">
+            <label>Vehicle</label>
+            <span>2001 Honda CRV</span>
+        </div>
+        <div class="item">
+            <label>Sales Person</label>
+            <span>Sales Person</span>
+        </div>
+
+
+
+        <div class="item">
+            <label>Events</label>
+            <span>1,231,113</span>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
 <div class="footer">
     <div class="powered-by">powered by</div>
-    <img style="width: 155px; height: 26px"
-         src="data:image/svg+xml;base64,PHN2ZyBpZD0iR3JvdXBfNjc3MCIgZGF0YS1uYW1lPSJHcm91cCA2NzcwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTU1IiBoZWlnaHQ9IjI1Ljk2IiB2aWV3Qm94PSIwIDAgMTU1IDI1Ljk2Ij4NCiAgPGRlZnM+DQogICAgPGNsaXBQYXRoIGlkPSJjbGlwLXBhdGgiPg0KICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZV8zNjUxIiBkYXRhLW5hbWU9IlJlY3RhbmdsZSAzNjUxIiB3aWR0aD0iMTU1IiBoZWlnaHQ9IjI1Ljk2Ii8+DQogICAgPC9jbGlwUGF0aD4NCiAgPC9kZWZzPg0KICA8cGF0aCBpZD0iUGF0aF82OTUwMSIgZGF0YS1uYW1lPSJQYXRoIDY5NTAxIiBkPSJNMCwyNS45djIuNTUzSDUuMTVWNDIuMDk0SDguMDIzVjI4LjQ1N2g1LjM4MlYyNS45WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMjAuNzc2KSIvPg0KICA8ZyBpZD0iR3JvdXBfNjc2OSIgZGF0YS1uYW1lPSJHcm91cCA2NzY5Ij4NCiAgICA8ZyBpZD0iR3JvdXBfNjc2OCIgZGF0YS1uYW1lPSJHcm91cCA2NzY4IiBjbGlwLXBhdGg9InVybCgjY2xpcC1wYXRoKSI+DQogICAgICA8cGF0aCBpZD0iUGF0aF82OTUwMiIgZGF0YS1uYW1lPSJQYXRoIDY5NTAyIiBkPSJNNzEuMTIyLDUzLjc2NUg2Mi42NjhhMywzLDAsMCwwLC45NzIsMi4yLDMuNTI1LDMuNTI1LDAsMCwwLDIuNDA5Ljc4NSwzLjg5MywzLjg5MywwLDAsMCwyLjg3My0uOTg0bDEuMDcyLDIuMTExYTYuODA4LDYuODA4LDAsMCwxLTQuMzU0LDEuMTgyLDUuNzY0LDUuNzY0LDAsMCwxLTQuMjgyLTEuNTg2LDYuMDA3LDYuMDA3LDAsMCwxLTEuNTc1LTQuNDI2LDYuMTM5LDYuMTM5LDAsMCwxLDEuNzMtNC41MzEsNi4wNjYsNi4wNjYsMCwwLDEsOC4yODMtLjIsNS4yNTksNS4yNTksMCwwLDEsMS41NTgsMy45MTIsNy43MTcsNy43MTcsMCwwLDEtLjIzMiwxLjUzNm0tOC4zNTUtMi4wNzhINjguNThhMi42LDIuNiwwLDAsMC0yLjg3My0yLjZxLTIuMzY1LDAtMi45NCwyLjYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00Ny45NDcgLTM3LjUxOSkiLz4NCiAgICAgIDxwYXRoIGlkPSJQYXRoXzY5NTAzIiBkYXRhLW5hbWU9IlBhdGggNjk1MDMiIGQ9Ik0xMzIuODQ1LDU3LjY1NmEyLjY3NCwyLjY3NCwwLDAsMS0xLjMxLDEuMDExLDQuOTg3LDQuOTg3LDAsMCwxLTEuOTUuMzkyLDQuNDE0LDQuNDE0LDAsMCwxLTMuMDA2LS45NTYsMy40MSwzLjQxLDAsMCwxLTEuMDk0LTIuNzEzLDMuOCwzLjgsMCwwLDEsMS41NDItMy4yMTYsNy4xNzEsNy4xNzEsMCwwLDEsNC4zODItMS4xNiw0LjgzOSw0LjgzOSwwLDAsMSwxLjE0OS4xNjZxMC0yLjA4OS0yLjY0MS0yLjA4OWE1Ljg1Myw1Ljg1MywwLDAsMC0yLjYwOC41MTlsLS42LTIuMTQ0YTcuNzY1LDcuNzY1LDAsMCwxLDMuMzkzLS42ODUsNS41LDUuNSwwLDAsMSwzLjk2NywxLjIzMnExLjI2LDEuMjMyLDEuMjYsNC42Njl2Mi41MzFxMCwyLjM2NS45NTEsMi45NzNhMS40ODgsMS40ODgsMCwwLDEtLjc2My43MzUsMy4wNzQsMy4wNzQsMCwwLDEtLjk2MS4xMzgsMS41MzMsMS41MzMsMCwwLDEtMS4wNzItLjQ0MiwyLjI1NCwyLjI1NCwwLDAsMS0uNjQxLS45NjFtLS4yNjUtNC4zODdhNS44NjksNS44NjksMCwwLDAtMS4wNjEtLjE0NHEtMy4yNzEsMC0zLjI3MSwyLjE0NCwwLDEuNTkxLDEuODQ2LDEuNTkxYTIuMiwyLjIsMCwwLDAsMi40ODctMi40ODdaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTAwLjY0MiAtMzcuNTE5KSIvPg0KICAgICAgPHBhdGggaWQ9IlBhdGhfNjk1MDQiIGRhdGEtbmFtZT0iUGF0aCA2OTUwNCIgZD0iTTIwNCw1OC44MzhWNTEuNDIycTAtMi4zMzItMi4wODktMi4zMzJhMi4yLDIuMiwwLDAsMC0xLjE5NC4zNjUsMi4xMjcsMi4xMjcsMCwwLDAtLjgwNy44NHY4LjU0M2gtMi43NjNWNTAuOTkxQTEuODIxLDEuODIxLDAsMCwwLDE5Ni42LDQ5LjZhMi4xMjcsMi4xMjcsMCwwLDAtMS41MjUtLjUxNCwyLjE1OSwyLjE1OSwwLDAsMC0xLjEzMy4zODcsMi42NDMsMi42NDMsMCwwLDAtLjg5Ljg1MXY4LjUxaC0yLjc2M1Y0N2gxLjlsLjU2MywxLjAzOWEzLjg0LDMuODQsMCwwLDEsMi45NzMtMS4yNiw0LjYxNiw0LjYxNiwwLDAsMSwzLjU0OCwxLjI4MiwzLjU2MSwzLjU2MSwwLDAsMSwxLjQ0OC0uOTM0LDUuMjU3LDUuMjU3LDAsMCwxLDEuODU3LS4zNDgsNC4wOTEsNC4wOTEsMCwwLDEsMy4wNzgsMS4xMzMsNC4yNzcsNC4yNzcsMCwwLDEsMS4xLDMuMTExdjcuODEzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE1Mi42MTggLTM3LjUxOSkiLz4NCiAgICAgIDxwYXRoIGlkPSJQYXRoXzY5NTA1IiBkYXRhLW5hbWU9IlBhdGggNjk1MDUiIGQ9Ik00MTQuODI1LDUzLjc2NWgtOC40NTRhMywzLDAsMCwwLC45NzIsMi4yLDMuNTI1LDMuNTI1LDAsMCwwLDIuNDA5Ljc4NSwzLjg5MywzLjg5MywwLDAsMCwyLjg3My0uOTg0bDEuMDcyLDIuMTExYTYuODA4LDYuODA4LDAsMCwxLTQuMzU0LDEuMTgyLDUuNzY0LDUuNzY0LDAsMCwxLTQuMjgyLTEuNTg2LDYuMDA3LDYuMDA3LDAsMCwxLTEuNTc1LTQuNDI2LDYuMTM5LDYuMTM5LDAsMCwxLDEuNzMtNC41MzEsNi4wNjYsNi4wNjYsMCwwLDEsOC4yODMtLjIsNS4yNTksNS4yNTksMCwwLDEsMS41NTgsMy45MTIsNy43MTMsNy43MTMsMCwwLDEtLjIzMiwxLjUzNm0tOC4zNTUtMi4wNzhoNS44MTNhMi42LDIuNiwwLDAsMC0yLjg3My0yLjZxLTIuMzY1LDAtMi45NCwyLjYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMjMuNjA0IC0zNy41MTkpIi8+DQogICAgICA8cGF0aCBpZD0iUGF0aF82OTUwNiIgZGF0YS1uYW1lPSJQYXRoIDY5NTA2IiBkPSJNNDcwLjY1MSwyMi45MzlsMi43NjMtLjY2M1YzNS41ODJxMCwyLjE4OCwxLjMsMi42MDhhMi4yNywyLjI3LDAsMCwxLTIuMTg4LDEuMjE2cS0xLjg3OSwwLTEuODc5LTIuNjA4WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTM3Ny40NzIgLTE3Ljg2NikiLz4NCiAgICAgIDxwYXRoIGlkPSJQYXRoXzY5NTA3IiBkYXRhLW5hbWU9IlBhdGggNjk1MDciIGQ9Ik00OTguMDYsNTIuODkyYTYuMjYyLDYuMjYyLDAsMCwxLDEuNTYzLTQuNDA5LDYuMDE0LDYuMDE0LDAsMCwxLDguMzE2LS4wNjYsNi4zODksNi4zODksMCwwLDEsMS40OTIsNC40NzYsNi40MjUsNi40MjUsMCwwLDEtMS41Miw0LjUsNi4wNDEsNi4wNDEsMCwwLDEtOC4zNTUtLjAxNyw2LjUsNi41LDAsMCwxLTEuNS00LjQ4MW0yLjg3MywwcTAsMy45MTIsMi44MTgsMy45MTJhMi40MjIsMi40MjIsMCwwLDAsMi4wNS0xLjAxNyw0Ljc3OCw0Ljc3OCwwLDAsMCwuNzU3LTIuOXEwLTMuODU3LTIuODA3LTMuODU3YTIuNDM2LDIuNDM2LDAsMCwwLTIuMDU1LDEuMDE3LDQuNjUsNC42NSwwLDAsMC0uNzYyLDIuODQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zOTkuNDU1IC0zNy41MTkpIi8+DQogICAgICA8cGF0aCBpZD0iUGF0aF82OTUwOCIgZGF0YS1uYW1lPSJQYXRoIDY5NTA4IiBkPSJNNTcyLjgxMiw0Ny45NDFsLTEuMTgyLDIuMDY2YTMuNjQ3LDMuNjQ3LDAsMCwwLTIuNjA4LS45MTcsMy4xMjQsMy4xMjQsMCwwLDAtMi40ODEsMS4wNDQsNC4yNDgsNC4yNDgsMCwwLDAtLjkxMiwyLjg5cTAsMy43MjUsMy41NDcsMy43MjRhNC4wMDgsNC4wMDgsMCwwLDAsMi43MDgtMS4wMTdMNTcyLjksNTcuOTFhNy4wMTEsNy4wMTEsMCwwLDEtMi4xMDUuOTUsOS45Nyw5Ljk3LDAsMCwxLTIuMTI3LjIsNS44MjMsNS44MjMsMCwwLDEtNC4zMjYtMS42LDYuMDIxLDYuMDIxLDAsMCwxLTEuNTg2LTQuNDM3LDYuMDkxLDYuMDkxLDAsMCwxLDEuNzM1LTQuNTIsNi40MTUsNi40MTUsMCwwLDEsNC43My0xLjcyNCw1Ljc2Myw1Ljc2MywwLDAsMSwzLjU5MiwxLjE2IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDUxLjM0MiAtMzcuNTE5KSIvPg0KICAgICAgPHBhdGggaWQ9IlBhdGhfNjk1MDkiIGRhdGEtbmFtZT0iUGF0aCA2OTUwOSIgZD0iTTYyNC4zODQsNDEuMTU0di05LjU3SDYyMi44N1YyOS4zMThoNC4zMVY0MS4xNTRabTEuNDI2LTE2LjQyMmExLjYsMS42LDAsMSwxLTEuMTMzLjQ3LDEuNTQ0LDEuNTQ0LDAsMCwxLDEuMTMzLS40NyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQ5OS41NTUgLTE5LjgzNikiLz4NCiAgICAgIDxwYXRoIGlkPSJQYXRoXzY5NTEwIiBkYXRhLW5hbWU9IlBhdGggNjk1MTAiIGQ9Ik02NTkuMDY4LDM2LjI0SDY1Ny43VjM0LjAxOWgxLjM3VjMxLjYxbDIuNzYzLTEuMDE3djMuNDI2aDMuMjQ5VjM2LjI0aC0zLjI0OXY1LjE4M2EzLjA1NiwzLjA1NiwwLDAsMCwuNCwxLjgsMS42NDMsMS42NDMsMCwwLDAsMS4zOTIuNTI1LDMuNDI4LDMuNDI4LDAsMCwwLDEuODU3LS41NDF2Mi41NDJhOC44LDguOCwwLDAsMS0yLjc0MS4zMzEsMy41NzIsMy41NzIsMCwwLDEtMi43MTgtMSwzLjk3LDMuOTcsMCwwLDEtLjk1MS0yLjg0NloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MjcuNDg4IC0yNC41MzYpIi8+DQogICAgICA8cGF0aCBpZD0iUGF0aF82OTUxMSIgZGF0YS1uYW1lPSJQYXRoIDY5NTExIiBkPSJNNzA4Ljg1OCw2MS42MzVhMy44LDMuOCwwLDAsMS0xLjksMS45NjIsNy4wNjIsNy4wNjIsMCwwLDEtMy4zODcuNzc5VjYxLjkzM3EzLjE5NCwwLDMuMTk0LTEuNmE5Ljg2MSw5Ljg2MSwwLDAsMC0uODg0LTMuMjQ5bC0zLjctOS4xODRoMi44NjJsMy4yMjcsOC4xNzgsMi45MDYtOC4xNzhoMi44NjJaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTYzLjE2NiAtMzguNDE1KSIvPg0KICAgICAgPHBhdGggaWQ9IlBhdGhfNjk1MTIiIGRhdGEtbmFtZT0iUGF0aCA2OTUxMiIgZD0iTTI5NC4yMzksMGExMS40NTQsMTEuNDU0LDAsMSwwLDExLjQ1NCwxMS40NTVBMTEuNDU1LDExLjQ1NSwwLDAsMCwyOTQuMjM5LDBtLjA0LDIxLjc5MkwyODYuMDcxLDQuNDM4aDQuNjIxbDMuNTg4LDcuNjUzLDMuNTYzLTcuNjUzaDQuNjIxWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIyNi44KSIvPg0KICAgICAgPHBhdGggaWQ9IlBhdGhfNjk1MTMiIGRhdGEtbmFtZT0iUGF0aCA2OTUxMyIgZD0iTTc3MC41MjUsNDIuMDE3aC4xNDJjLjE2NywwLC4zLS4wNi4zLS4yLDAtLjEyNy0uMDg3LS4yMDktLjI3Ny0uMjA5YS42ODQuNjg0LDAsMCwwLS4xNjcuMDE2Wm0tLjAwOS43NzVoLS4zVjQxLjQxYTMuMzA5LDMuMzA5LDAsMCwxLC41LS4wNDMuNjY2LjY2NiwwLDAsMSwuNDQ1LjExLjM1Ni4zNTYsMCwwLDEsLjEzNS4yOTQuMzUxLjM1MSwwLDAsMS0uMjcxLjMyOXYuMDE3Yy4xMjcuMDQyLjE5Mi4xNTEuMjMuMzM2YTEuMzA4LDEuMzA4LDAsMCwwLC4xLjMzOGgtLjMxN2ExLjEyMiwxLjEyMiwwLDAsMS0uMS0uMzM4Yy0uMDIzLS4xNDMtLjEtLjIwOS0uMjctLjIwOWgtLjE0NFptLS44LS43MTdhMS4wNDcsMS4wNDcsMCwwLDAsMS4wMTcsMS4xLDEuMDMxLDEuMDMxLDAsMCwwLC45OTUtMS4wOTUsMS4wMSwxLjAxLDAsMSwwLTIuMDExLS4wMDltMi4zNDUsMGExLjM0LDEuMzQsMCwxLDEtMS4zMjktMS4zODIsMS4zNTQsMS4zNTQsMCwwLDEsMS4zMjksMS4zODIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC02MTcuMDU5IC0zMi42MzcpIi8+DQogICAgPC9nPg0KICA8L2c+DQo8L3N2Zz4NCg=="
-         alt="">
+    <img alt="" style="width: 155px; height: 26px"
+         src="data:image/svg+xml;base64,PHN2ZyBpZD0iR3JvdXBfNjc3MCIgZGF0YS1uYW1lPSJHcm91cCA2NzcwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB3aWR0aD0iMTU1IiBoZWlnaHQ9IjI1Ljk2IiB2aWV3Qm94PSIwIDAgMTU1IDI1Ljk2Ij4NCiAgPGRlZnM+DQogICAgPGNsaXBQYXRoIGlkPSJjbGlwLXBhdGgiPg0KICAgICAgPHJlY3QgaWQ9IlJlY3RhbmdsZV8zNjUxIiBkYXRhLW5hbWU9IlJlY3RhbmdsZSAzNjUxIiB3aWR0aD0iMTU1IiBoZWlnaHQ9IjI1Ljk2Ii8+DQogICAgPC9jbGlwUGF0aD4NCiAgPC9kZWZzPg0KICA8cGF0aCBpZD0iUGF0aF82OTUwMSIgZGF0YS1uYW1lPSJQYXRoIDY5NTAxIiBkPSJNMCwyNS45djIuNTUzSDUuMTVWNDIuMDk0SDguMDIzVjI4LjQ1N2g1LjM4MlYyNS45WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMjAuNzc2KSIvPg0KICA8ZyBpZD0iR3JvdXBfNjc2OSIgZGF0YS1uYW1lPSJHcm91cCA2NzY5Ij4NCiAgICA8ZyBpZD0iR3JvdXBfNjc2OCIgZGF0YS1uYW1lPSJHcm91cCA2NzY4IiBjbGlwLXBhdGg9InVybCgjY2xpcC1wYXRoKSI+DQogICAgICA8cGF0aCBpZD0iUGF0aF82OTUwMiIgZGF0YS1uYW1lPSJQYXRoIDY5NTAyIiBkPSJNNzEuMTIyLDUzLjc2NUg2Mi42NjhhMywzLDAsMCwwLC45NzIsMi4yLDMuNTI1LDMuNTI1LDAsMCwwLDIuNDA5Ljc4NSwzLjg5MywzLjg5MywwLDAsMCwyLjg3My0uOTg0bDEuMDcyLDIuMTExYTYuODA4LDYuODA4LDAsMCwxLTQuMzU0LDEuMTgyLDUuNzY0LDUuNzY0LDAsMCwxLTQuMjgyLTEuNTg2LDYuMDA3LDYuMDA3LDAsMCwxLTEuNTc1LTQuNDI2LDYuMTM5LDYuMTM5LDAsMCwxLDEuNzMtNC41MzEsNi4wNjYsNi4wNjYsMCwwLDEsOC4yODMtLjIsNS4yNTksNS4yNTksMCwwLDEsMS41NTgsMy45MTIsNy43MTcsNy43MTcsMCwwLDEtLjIzMiwxLjUzNm0tOC4zNTUtMi4wNzhINjguNThhMi42LDIuNiwwLDAsMC0yLjg3My0yLjZxLTIuMzY1LDAtMi45NCwyLjYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC00Ny45NDcgLTM3LjUxOSkiLz4NCiAgICAgIDxwYXRoIGlkPSJQYXRoXzY5NTAzIiBkYXRhLW5hbWU9IlBhdGggNjk1MDMiIGQ9Ik0xMzIuODQ1LDU3LjY1NmEyLjY3NCwyLjY3NCwwLDAsMS0xLjMxLDEuMDExLDQuOTg3LDQuOTg3LDAsMCwxLTEuOTUuMzkyLDQuNDE0LDQuNDE0LDAsMCwxLTMuMDA2LS45NTYsMy40MSwzLjQxLDAsMCwxLTEuMDk0LTIuNzEzLDMuOCwzLjgsMCwwLDEsMS41NDItMy4yMTYsNy4xNzEsNy4xNzEsMCwwLDEsNC4zODItMS4xNiw0LjgzOSw0LjgzOSwwLDAsMSwxLjE0OS4xNjZxMC0yLjA4OS0yLjY0MS0yLjA4OWE1Ljg1Myw1Ljg1MywwLDAsMC0yLjYwOC41MTlsLS42LTIuMTQ0YTcuNzY1LDcuNzY1LDAsMCwxLDMuMzkzLS42ODUsNS41LDUuNSwwLDAsMSwzLjk2NywxLjIzMnExLjI2LDEuMjMyLDEuMjYsNC42Njl2Mi41MzFxMCwyLjM2NS45NTEsMi45NzNhMS40ODgsMS40ODgsMCwwLDEtLjc2My43MzUsMy4wNzQsMy4wNzQsMCwwLDEtLjk2MS4xMzgsMS41MzMsMS41MzMsMCwwLDEtMS4wNzItLjQ0MiwyLjI1NCwyLjI1NCwwLDAsMS0uNjQxLS45NjFtLS4yNjUtNC4zODdhNS44NjksNS44NjksMCwwLDAtMS4wNjEtLjE0NHEtMy4yNzEsMC0zLjI3MSwyLjE0NCwwLDEuNTkxLDEuODQ2LDEuNTkxYTIuMiwyLjIsMCwwLDAsMi40ODctMi40ODdaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTAwLjY0MiAtMzcuNTE5KSIvPg0KICAgICAgPHBhdGggaWQ9IlBhdGhfNjk1MDQiIGRhdGEtbmFtZT0iUGF0aCA2OTUwNCIgZD0iTTIwNCw1OC44MzhWNTEuNDIycTAtMi4zMzItMi4wODktMi4zMzJhMi4yLDIuMiwwLDAsMC0xLjE5NC4zNjUsMi4xMjcsMi4xMjcsMCwwLDAtLjgwNy44NHY4LjU0M2gtMi43NjNWNTAuOTkxQTEuODIxLDEuODIxLDAsMCwwLDE5Ni42LDQ5LjZhMi4xMjcsMi4xMjcsMCwwLDAtMS41MjUtLjUxNCwyLjE1OSwyLjE1OSwwLDAsMC0xLjEzMy4zODcsMi42NDMsMi42NDMsMCwwLDAtLjg5Ljg1MXY4LjUxaC0yLjc2M1Y0N2gxLjlsLjU2MywxLjAzOWEzLjg0LDMuODQsMCwwLDEsMi45NzMtMS4yNiw0LjYxNiw0LjYxNiwwLDAsMSwzLjU0OCwxLjI4MiwzLjU2MSwzLjU2MSwwLDAsMSwxLjQ0OC0uOTM0LDUuMjU3LDUuMjU3LDAsMCwxLDEuODU3LS4zNDgsNC4wOTEsNC4wOTEsMCwwLDEsMy4wNzgsMS4xMzMsNC4yNzcsNC4yNzcsMCwwLDEsMS4xLDMuMTExdjcuODEzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTE1Mi42MTggLTM3LjUxOSkiLz4NCiAgICAgIDxwYXRoIGlkPSJQYXRoXzY5NTA1IiBkYXRhLW5hbWU9IlBhdGggNjk1MDUiIGQ9Ik00MTQuODI1LDUzLjc2NWgtOC40NTRhMywzLDAsMCwwLC45NzIsMi4yLDMuNTI1LDMuNTI1LDAsMCwwLDIuNDA5Ljc4NSwzLjg5MywzLjg5MywwLDAsMCwyLjg3My0uOTg0bDEuMDcyLDIuMTExYTYuODA4LDYuODA4LDAsMCwxLTQuMzU0LDEuMTgyLDUuNzY0LDUuNzY0LDAsMCwxLTQuMjgyLTEuNTg2LDYuMDA3LDYuMDA3LDAsMCwxLTEuNTc1LTQuNDI2LDYuMTM5LDYuMTM5LDAsMCwxLDEuNzMtNC41MzEsNi4wNjYsNi4wNjYsMCwwLDEsOC4yODMtLjIsNS4yNTksNS4yNTksMCwwLDEsMS41NTgsMy45MTIsNy43MTMsNy43MTMsMCwwLDEtLjIzMiwxLjUzNm0tOC4zNTUtMi4wNzhoNS44MTNhMi42LDIuNiwwLDAsMC0yLjg3My0yLjZxLTIuMzY1LDAtMi45NCwyLjYiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zMjMuNjA0IC0zNy41MTkpIi8+DQogICAgICA8cGF0aCBpZD0iUGF0aF82OTUwNiIgZGF0YS1uYW1lPSJQYXRoIDY5NTA2IiBkPSJNNDcwLjY1MSwyMi45MzlsMi43NjMtLjY2M1YzNS41ODJxMCwyLjE4OCwxLjMsMi42MDhhMi4yNywyLjI3LDAsMCwxLTIuMTg4LDEuMjE2cS0xLjg3OSwwLTEuODc5LTIuNjA4WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTM3Ny40NzIgLTE3Ljg2NikiLz4NCiAgICAgIDxwYXRoIGlkPSJQYXRoXzY5NTA3IiBkYXRhLW5hbWU9IlBhdGggNjk1MDciIGQ9Ik00OTguMDYsNTIuODkyYTYuMjYyLDYuMjYyLDAsMCwxLDEuNTYzLTQuNDA5LDYuMDE0LDYuMDE0LDAsMCwxLDguMzE2LS4wNjYsNi4zODksNi4zODksMCwwLDEsMS40OTIsNC40NzYsNi40MjUsNi40MjUsMCwwLDEtMS41Miw0LjUsNi4wNDEsNi4wNDEsMCwwLDEtOC4zNTUtLjAxNyw2LjUsNi41LDAsMCwxLTEuNS00LjQ4MW0yLjg3MywwcTAsMy45MTIsMi44MTgsMy45MTJhMi40MjIsMi40MjIsMCwwLDAsMi4wNS0xLjAxNyw0Ljc3OCw0Ljc3OCwwLDAsMCwuNzU3LTIuOXEwLTMuODU3LTIuODA3LTMuODU3YTIuNDM2LDIuNDM2LDAsMCwwLTIuMDU1LDEuMDE3LDQuNjUsNC42NSwwLDAsMC0uNzYyLDIuODQiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0zOTkuNDU1IC0zNy41MTkpIi8+DQogICAgICA8cGF0aCBpZD0iUGF0aF82OTUwOCIgZGF0YS1uYW1lPSJQYXRoIDY5NTA4IiBkPSJNNTcyLjgxMiw0Ny45NDFsLTEuMTgyLDIuMDY2YTMuNjQ3LDMuNjQ3LDAsMCwwLTIuNjA4LS45MTcsMy4xMjQsMy4xMjQsMCwwLDAtMi40ODEsMS4wNDQsNC4yNDgsNC4yNDgsMCwwLDAtLjkxMiwyLjg5cTAsMy43MjUsMy41NDcsMy43MjRhNC4wMDgsNC4wMDgsMCwwLDAsMi43MDgtMS4wMTdMNTcyLjksNTcuOTFhNy4wMTEsNy4wMTEsMCwwLDEtMi4xMDUuOTUsOS45Nyw5Ljk3LDAsMCwxLTIuMTI3LjIsNS44MjMsNS44MjMsMCwwLDEtNC4zMjYtMS42LDYuMDIxLDYuMDIxLDAsMCwxLTEuNTg2LTQuNDM3LDYuMDkxLDYuMDkxLDAsMCwxLDEuNzM1LTQuNTIsNi40MTUsNi40MTUsMCwwLDEsNC43My0xLjcyNCw1Ljc2Myw1Ljc2MywwLDAsMSwzLjU5MiwxLjE2IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNDUxLjM0MiAtMzcuNTE5KSIvPg0KICAgICAgPHBhdGggaWQ9IlBhdGhfNjk1MDkiIGRhdGEtbmFtZT0iUGF0aCA2OTUwOSIgZD0iTTYyNC4zODQsNDEuMTU0di05LjU3SDYyMi44N1YyOS4zMThoNC4zMVY0MS4xNTRabTEuNDI2LTE2LjQyMmExLjYsMS42LDAsMSwxLTEuMTMzLjQ3LDEuNTQ0LDEuNTQ0LDAsMCwxLDEuMTMzLS40NyIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTQ5OS41NTUgLTE5LjgzNikiLz4NCiAgICAgIDxwYXRoIGlkPSJQYXRoXzY5NTEwIiBkYXRhLW5hbWU9IlBhdGggNjk1MTAiIGQ9Ik02NTkuMDY4LDM2LjI0SDY1Ny43VjM0LjAxOWgxLjM3VjMxLjYxbDIuNzYzLTEuMDE3djMuNDI2aDMuMjQ5VjM2LjI0aC0zLjI0OXY1LjE4M2EzLjA1NiwzLjA1NiwwLDAsMCwuNCwxLjgsMS42NDMsMS42NDMsMCwwLDAsMS4zOTIuNTI1LDMuNDI4LDMuNDI4LDAsMCwwLDEuODU3LS41NDF2Mi41NDJhOC44LDguOCwwLDAsMS0yLjc0MS4zMzEsMy41NzIsMy41NzIsMCwwLDEtMi43MTgtMSwzLjk3LDMuOTcsMCwwLDEtLjk1MS0yLjg0NloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC01MjcuNDg4IC0yNC41MzYpIi8+DQogICAgICA8cGF0aCBpZD0iUGF0aF82OTUxMSIgZGF0YS1uYW1lPSJQYXRoIDY5NTExIiBkPSJNNzA4Ljg1OCw2MS42MzVhMy44LDMuOCwwLDAsMS0xLjksMS45NjIsNy4wNjIsNy4wNjIsMCwwLDEtMy4zODcuNzc5VjYxLjkzM3EzLjE5NCwwLDMuMTk0LTEuNmE5Ljg2MSw5Ljg2MSwwLDAsMC0uODg0LTMuMjQ5bC0zLjctOS4xODRoMi44NjJsMy4yMjcsOC4xNzgsMi45MDYtOC4xNzhoMi44NjJaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNTYzLjE2NiAtMzguNDE1KSIvPg0KICAgICAgPHBhdGggaWQ9IlBhdGhfNjk1MTIiIGRhdGEtbmFtZT0iUGF0aCA2OTUxMiIgZD0iTTI5NC4yMzksMGExMS40NTQsMTEuNDU0LDAsMSwwLDExLjQ1NCwxMS40NTVBMTEuNDU1LDExLjQ1NSwwLDAsMCwyOTQuMjM5LDBtLjA0LDIxLjc5MkwyODYuMDcxLDQuNDM4aDQuNjIxbDMuNTg4LDcuNjUzLDMuNTYzLTcuNjUzaDQuNjIxWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIyNi44KSIvPg0KICAgICAgPHBhdGggaWQ9IlBhdGhfNjk1MTMiIGRhdGEtbmFtZT0iUGF0aCA2OTUxMyIgZD0iTTc3MC41MjUsNDIuMDE3aC4xNDJjLjE2NywwLC4zLS4wNi4zLS4yLDAtLjEyNy0uMDg3LS4yMDktLjI3Ny0uMjA5YS42ODQuNjg0LDAsMCwwLS4xNjcuMDE2Wm0tLjAwOS43NzVoLS4zVjQxLjQxYTMuMzA5LDMuMzA5LDAsMCwxLC41LS4wNDMuNjY2LjY2NiwwLDAsMSwuNDQ1LjExLjM1Ni4zNTYsMCwwLDEsLjEzNS4yOTQuMzUxLjM1MSwwLDAsMS0uMjcxLjMyOXYuMDE3Yy4xMjcuMDQyLjE5Mi4xNTEuMjMuMzM2YTEuMzA4LDEuMzA4LDAsMCwwLC4xLjMzOGgtLjMxN2ExLjEyMiwxLjEyMiwwLDAsMS0uMS0uMzM4Yy0uMDIzLS4xNDMtLjEtLjIwOS0uMjctLjIwOWgtLjE0NFptLS44LS43MTdhMS4wNDcsMS4wNDcsMCwwLDAsMS4wMTcsMS4xLDEuMDMxLDEuMDMxLDAsMCwwLC45OTUtMS4wOTUsMS4wMSwxLjAxLDAsMSwwLTIuMDExLS4wMDltMi4zNDUsMGExLjM0LDEuMzQsMCwxLDEtMS4zMjktMS4zODIsMS4zNTQsMS4zNTQsMCwwLDEsMS4zMjksMS4zODIiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC02MTcuMDU5IC0zMi42MzcpIi8+DQogICAgPC9nPg0KICA8L2c+DQo8L3N2Zz4NCg==">
 </div>
 
 </body>
